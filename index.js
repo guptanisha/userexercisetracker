@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 
-mongoose.connect('mongodb+srv://nishag1466:zEnlpbi7gFbtsxjG@test-freecodecamp.8fwhuvj.mongodb.net/sample_mflix?retryWrites=true&w=majority&appName=test-freecodecamp', { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('xyz'});
 
 // Step 2: Create User Model
 const userSchema = new mongoose.Schema({
