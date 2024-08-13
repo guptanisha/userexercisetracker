@@ -74,11 +74,15 @@ app.post('/api/users/:_id/exercises', async (req, res) => {
 
     await exercise.save();
 
-    res.json({
-      username: user.username,
-      _id: user._id,
-      exercise: exercise
-    });
+     const exerciseResponse = {
+      username: exercise.username,
+      _id: exercise._id,
+      description: exercise.description,
+      duration: exercise.duration,
+      date: exercise.date.toDateString()
+    };
+
+    res.json(exerciseResponse);
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
